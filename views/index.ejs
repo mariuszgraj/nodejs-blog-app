@@ -1,0 +1,11 @@
+<% include ./partials/header %>
+
+<% blogs.forEach(function(blog){ %>
+<div class="container card mt-5 col-lg-9">
+    <a href="/blogs/<%= blog._id %>"><%=blog.title%></a>
+    <p><%- blog.content.substring(0, 100) %>...</p>
+    <a href="/blogs/<%= blog._id %>">Read More</a>
+</div>
+<% }); %>
+
+<% include ./partials/footer %>

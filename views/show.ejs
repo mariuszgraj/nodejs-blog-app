@@ -1,0 +1,13 @@
+<% include ./partials/header %>
+
+<div class="container card mt-5">
+    <h1 class="mx-auto pt-3 pb-2"><%= blog.title %><h1>
+    <img class="mx-auto d-block col-lg-9" src="<%= blog.image %>" >
+    <p class="mx-auto d-block col-lg-9 mt-3" style="font-size: 1rem;"><%- blog.content %></p>
+    <a class="btn btn-primary mx-auto d-block col-lg-9" href="/blogs/<%= blog._id %>/edit">Edit</a>
+    <form action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">
+        <button class="btn btn-success col-lg-9 mx-auto d-block mt-4">Delete</button>
+    </form>
+</div>
+
+<% include ./partials/footer %>
